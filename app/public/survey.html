@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>F1 Driver Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">F1 Driver Survey</h1>
+            <p class="lead">Answer these questions to the best of your ability</p>
+        </div>
+        <a href="home.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+    </div>
+    <h3><strong>Question 1</strong></h3>
+    <h4>How much do you like winning? </h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (not much)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (a lot)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 2</strong></h3>
+    <h4>How much do you hate losing?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (not much)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (a lot)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 3</strong></h3>
+    <h4>How outgoing are you?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (not very)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (very)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 4</strong></h3>
+    <h4>Can you stay calm under pressure?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (yes)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (no)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 5</strong></h3>
+    <h4>In your opinion, it is sometimes OK to step on others to get ahead in life?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (agree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (disagree)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 6</strong></h3>
+    <h4>You usually prefer to get your revenge rather than forgive.</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (agree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (disagree)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 7</strong></h3>
+    <h4>Do you always listen to team orders?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (yes)</option>
+      <option value="2">2</option>
+      <option value="3">3 </option>
+      <option value="4">4</option>
+      <option value="5">5 (no)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 8</strong></h3>
+    <h4>You look after yourself first, and others come in second.</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (agree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (disagree)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 9</strong></h3>
+    <h4>How much do you like porridge?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (a lot)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (not much)</option>
+    </select>
+    <br><br>
+
+
+    <h3><strong>Question 10</strong></h3>
+    <h4>Are you a heavy partier?</h4>
+    <select class="chosen-select" id="q1">
+      <option value=""></option>
+      <option value="1">1 (yes)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (no)</option>
+    </select>
+    <br>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        Submit</button>
+   
+       <hr>
+       <footer class="footer">
+         <div class="container">
+           <p><a href="/api/highlander">API Highlanders</a> | <a href="https://github.com/cebpritchett/friendFinder">GitHub Repo</a></p>
+         </div>
+       </footer>
+
+
+
+</body>
+
+</html>
