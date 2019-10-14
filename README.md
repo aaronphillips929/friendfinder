@@ -6,6 +6,8 @@
 ***Technology:***
 Bootstrap, Node.js, AJAX, jQuery, Express.js, NPM, Heroku
 
+***Deployed on Heroku:*** https://f1drivermatch.herokuapp.com/
+
 ***Developer:*** Aaron Phillips
 
-***Deployed on Heroku:*** https://f1drivermatch.herokuapp.com/
+
