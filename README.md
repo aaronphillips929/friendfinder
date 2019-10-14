@@ -8,4 +8,4 @@ Bootstrap, Node.js, AJAX, jQuery, Express.js, NPM, Heroku
 
 ***Developer:*** Aaron Phillips
 
-***Deployed on Heroku:***https://f1drivermatch.herokuapp.com/
+***Deployed on Heroku:*** https://f1drivermatch.herokuapp.com/
