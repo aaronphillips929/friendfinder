@@ -1,50 +1,39 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var path = require("path");
+module.exports = function apiRoutes(app) {
+    const fs = require("fs");
+    const path = require("path");
+    var f1drivers = require("../data/f1.js");
 
-var f1drivers = require("../data/f1.js");
-
-module.exports = function (app) {
-    
     app.get("/api/f1drivers", function (req, res) {
-        res.json(f1drivers);
+        return res.json(f1drivers);
     });
-   
+
     app.post("/api/f1drivers", function (req, res) {
-
-        var bestMatch = {
-            name: "",
-            photo: "",
-            f1driversDifference: 1000
-        };
-
-        var userData = req.body;
-        var userScores = userData.scores;
-
-        var totalDifference = 0;
+        var totDiff;
+        var diffArry = [];
+        var newDriver = req.body;
 
         for (var i = 0; i < f1drivers.length; i++) {
+            totDiff = 0;
+            for (var j = 0; j < newDriver.scores.length; j++) {
+                totDiff += Math.abs(f1drivers[i].scores[j] - newDriver.scores[j]);
+            } 
+            diffArry.push(totDiff);
+        } 
 
-            console.log(f1drivers[i].name);
-            totalDifference = 0;
+        var match = diffArry.indexOf(Math.min(...diffArry));
 
-            for (var j = 0; j < f1drivers[i].scores[j]; j++) {
+        f1drivers.push(newDriver);
+        
+        console.log(newDriver);
 
-                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(f1drivers[i].scores[j]));
-
-                if (totalDifference <= bestMatch.f1driversDifference) {
-
-                    bestMatch.name = f1drivers[i].name;
-                    bestMatch.photo = f1drivers[i].photo;
-                    bestMatch.f1driversDifference = totalDifference;
-                }
-            }
-        }
-
-    friends.push(userData);
-
-    res.json(bestMatch);
-
-    });
-}
+        fs.readFile(path.join(__dirname, "../data/f1.json"), "utf8", function (err, data) {
+            if (err) throw err;
+            var json = JSON.parse(data);
+            json.push(newDriver);
+            fs.writeFile(path.join(__dirname, "../data/f1.json"), JSON.stringify(json, null, 2), function (err) {
+                if (err) throw err;
+            });
+        }); 
+        res.json(f1drivers[match]);
+    }); 
+} 
